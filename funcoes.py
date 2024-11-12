@@ -14,7 +14,7 @@ def mover_carros(movXCar1, movXCar2, movXCar3, acabou):
         movXCar3 += random.randint(0, 9)
     return movXCar1, movXCar2, movXCar3
 
-def cronometro_texto(tela, firstPlace, secondPlace, thirdPlace, distanciaPixel, distancia_segundo_terceiro, branco):
+def contador_texto(tela, firstPlace, secondPlace, thirdPlace, distanciaPixel, distancia_segundo_terceiro, branco):
     fonte = pygame.font.Font('freesansbold.ttf', 20)
     textoWinner = fonte.render(f'{firstPlace} está {distanciaPixel} pixels na frente do carro {secondPlace}', True, branco)
     tela.blit(textoWinner, (180, 20))
@@ -23,7 +23,7 @@ def cronometro_texto(tela, firstPlace, secondPlace, thirdPlace, distanciaPixel, 
     textoSegundo = fonte.render(f'{secondPlace} está {distancia_segundo_terceiro} pixels na frente do carro {thirdPlace}', True, branco)
     tela.blit(textoSegundo, (180, 40))
 
-def carros_pista(movXCar1, movXCar2, movXCar3, posYCar1, posYCar2, posYCar3):
+def carros_segunda_pista(movXCar1, movXCar2, movXCar3, posYCar1, posYCar2, posYCar3):
     if movXCar1 > 1000:
         movXCar1 = 0
         posYCar1 = 330
